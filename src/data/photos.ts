@@ -59,6 +59,16 @@ export interface Photo {
         category: 'portrait',
         date: '2024-05-04'
       },
+
+      {
+        id: '6',
+        src: '/images/gallery/guangzhou-at-night.jpeg',
+        alt: 'Guangzhou from above',
+        width: 5712,
+        height: 4284,
+        category: 'landscape',
+        date: '2024-09-30'
+      },
   ]
   
   // Helper function to get paginated photos
