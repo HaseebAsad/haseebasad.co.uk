@@ -7,7 +7,7 @@ export default function PhotosPage() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8">
         <h1 className="text-4xl font-bold">Photography</h1>
         <p className="mt-2 text-gray-600 dark:text-gray-400">
-          Fujifilm XF10 and iPhone 15 Pro Max
+          Fujifilm XF10 and iPhone 15 Pro
         </p>
       </div>
       <PhotoGrid />

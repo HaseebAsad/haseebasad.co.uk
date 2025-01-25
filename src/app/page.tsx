@@ -47,7 +47,7 @@ export default function HomePage() {
             />
           </div>
           <p className="text-gray-600 dark:text-gray-300">
-            Explore my collection of photographs capturing moments, landscapes, and stories.
+            Photos of travels, friends and all else in between.
           </p>
           <Link 
             href="/photos"
