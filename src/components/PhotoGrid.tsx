@@ -1,7 +1,5 @@
-// src/components/PhotoGrid.tsx
 'use client'
-
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useCallback } from 'react'
 import { useInView } from 'react-intersection-observer'
 import Lightbox from "yet-another-react-lightbox"
 import "yet-another-react-lightbox/styles.css"
@@ -18,18 +16,24 @@ const PhotoGrid = () => {
   const [isOpen, setIsOpen] = useState(false)
   const [photoIndex, setPhotoIndex] = useState(0)
 
-  const loadMorePhotos = () => {
+  // Memoize loadMorePhotos to prevent unnecessary re-renders
+  const loadMorePhotos = useCallback(() => {
     const { photos: newPhotos, hasMore: morePhotos } = getPaginatedPhotos(page)
     setPhotos(prev => [...prev, ...newPhotos])
     setHasMore(morePhotos)
     setPage(prev => prev + 1)
-  }
+  }, [page])
 
   useEffect(() => {
     if (inView && hasMore) {
       loadMorePhotos()
     }
-  }, [inView])
+  }, [inView, hasMore, loadMorePhotos]) // Added missing dependencies
+
+  const handlePhotoClick = (index: number) => {
+    setPhotoIndex(index)
+    setIsOpen(true)
+  }
 
   return (
     <>
@@ -41,10 +45,7 @@ const PhotoGrid = () => {
               src={photo.src}
               alt={photo.alt}
               date={photo.date || ''}
-              onClick={() => {
-                setPhotoIndex(index)
-                setIsOpen(true)
-              }}
+              onClick={() => handlePhotoClick(index)}
             />
           ))}
         </div>
