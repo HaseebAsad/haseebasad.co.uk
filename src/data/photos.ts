@@ -64,7 +64,7 @@ export interface Photo {
     {
       id: '15',
       src: '/images/gallery/nur-energie.jpeg',
-      alt: 'Gentlemen of Troy',
+      alt: 'Nur Energie!',
       width: 2729,
       height: 3638,
       category: 'iPhone 15 Pro',
