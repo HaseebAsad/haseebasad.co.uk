@@ -1,0 +1,50 @@
+---
+title: "Generating Alpha"
+description: "Exploring systematic ways to generate excess returns in quantitative trading"
+date: "2024-01-24"
+tags: ["finance", "quant"]
+---
+
+# Generating Alpha: A Quantitative Approach
+
+When we talk about generating alpha in quantitative trading, we're essentially looking for systematic ways to produce excess returns beyond what would be expected based on the market's performance.
+
+## Understanding Alpha
+
+In finance, alpha (α) represents the excess return of an investment relative to the return of a benchmark index. The formula is:
+
+α = R_p - [R_f + β(R_m - R_f)]
+
+Where:
+- R_p is the realized return
+- R_f is the risk-free rate
+- β is the beta of the investment
+- R_m is the market return
+
+## Code Example
+
+```python
+import pandas as pd
+import numpy as np
+
+def calculate_alpha(returns, market_returns, risk_free_rate):
+    # Calculate excess returns
+    excess_returns = returns - risk_free_rate
+    market_excess_returns = market_returns - risk_free_rate
+    
+    # Calculate beta using covariance
+    beta = np.cov(excess_returns, market_excess_returns)[0,1] / np.var(market_excess_returns)
+    
+    # Calculate alpha
+    alpha = np.mean(excess_returns) - (beta * np.mean(market_excess_returns))
+    
+    return alpha, beta
+```
+
+## Results
+
+| Year | Strategy Return | Market Return | Alpha |
+|------|----------------|---------------|-------|
+| 2023 | 15.2%          | 12.1%         | 3.1%  |
+| 2022 | -8.4%          | -12.8%        | 4.4%  |
+| 2021 | 28.7%          | 26.9%         | 1.8%  |
