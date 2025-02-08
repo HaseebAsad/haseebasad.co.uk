@@ -10,6 +10,15 @@ export interface Photo {
   }
   
   export const photos: Photo[] = [
+    {
+      id: '21',
+      src: '/images/gallery/free-palestine.jpeg',
+      alt: 'Paris',
+      width: 4032,
+      height: 3024,
+      category: 'iPhone 12 Pro Max',
+      date: '2023-11-11'
+    },
 
     {
       id: '20',
