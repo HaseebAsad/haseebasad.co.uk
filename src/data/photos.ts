@@ -12,7 +12,7 @@ export interface Photo {
   export const photos: Photo[] = [
     {
       id: '21',
-      src: '/images/gallery/paris.jpeg',
+      src: '/images/gallery/paris-gardens.jpeg',
       alt: 'Paris',
       width: 4032,
       height: 3024,
