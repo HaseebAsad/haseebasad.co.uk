@@ -1,8 +1,8 @@
 // src/utils/blog.ts
-import fs from 'fs/promises';  // Change to use promise-based fs
+import fs from 'fs/promises';
 import path from 'path';
 import matter from 'gray-matter';
-import { BlogPost, BlogFrontmatter, blogSchema, BLOG_CONFIG } from '@/config/blog';
+import { BlogPost, blogSchema, BLOG_CONFIG } from '@/config/blog';  // Removed BlogFrontmatter
 import { SITE } from '@/config/site';
 
 // Get a single blog post by slug
