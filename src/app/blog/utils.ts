@@ -16,32 +16,27 @@ export interface BlogPost {
 }
 
 export function getBlogPosts(): BlogPost[] {
-  // Get all files under /content/blog
-  try {
-    const files = fs.readdirSync(POSTS_PATH)
-    const posts = files
-      .filter((file) => /\.mdx?$/.test(file))
-      .map((file) => {
-        const filePath = path.join(POSTS_PATH, file)
-        const source = fs.readFileSync(filePath, 'utf8')
-        const { data, content } = matter(source)
+  const files = fs.readdirSync(POSTS_PATH)
+  const posts = files
+    .filter((file) => /\.mdx?$/.test(file))
+    .map((file) => {
+      const filePath = path.join(POSTS_PATH, file)
+      const source = fs.readFileSync(filePath, 'utf8')
+      const { data, content } = matter(source)
 
-        return {
-          slug: file.replace(/\.mdx?$/, ''),
-          title: data.title,
-          description: data.description,
-          date: data.date,
-          tags: data.tags || [],
-          image: data.image,
-          content
-        }
-      })
-      .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+      return {
+        slug: file.replace(/\.mdx?$/, ''),
+        title: data.title,
+        description: data.description,
+        date: data.date,
+        tags: data.tags || [],
+        image: data.image,
+        content
+      }
+    })
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
 
-    return posts
-  } catch {
-    return []
-  }
+  return posts
 }
 
 export function getBlogPost(slug: string): BlogPost | null {
@@ -59,7 +54,7 @@ export function getBlogPost(slug: string): BlogPost | null {
       image: data.image,
       content
     }
-  } catch {
+  } catch (error) {
     return null
   }
 }
