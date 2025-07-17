@@ -1,25 +1,13 @@
 import React from 'react';
 import Link from 'next/link';
 
-// Sample blog posts data structure
+// Preview blog posts
 const posts = [
   {
-    title: "Generating Alpha",
-    description: "How to use Git Hooks to set your Created and Modified Dates on quantitative trading strategies",
-    date: "2025-01-24",
-    slug: "generating-alpha"
-  },
-  {
-    title: "Understanding Market Microstructure",
-    description: "A deep dive into how markets actually function at the microscopic level",
-    date: "2025-01-20",
-    slug: "market-microstructure"
-  },
-  {
-    title: "Building Trading Systems",
-    description: "Essential components of robust automated trading systems",
-    date: "2025-01-15",
-    slug: "trading-systems"
+    title: "Memorandum: On Stress Testing",
+    description: "In preparation for an interactive tool",
+    date: "2025-07-17",
+    slug: "stress-test-prep"
   }
 ];
 
