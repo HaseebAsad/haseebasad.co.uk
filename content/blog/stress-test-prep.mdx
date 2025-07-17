@@ -1,0 +1,27 @@
+---
+title: "Memorandum: On Stress Testing"
+description: "In preparation for an interactive tool"
+pubDatetime: "2025-07-17T09:22:00Z"
+featured: true
+draft: false
+tags:
+  - stress testing
+  - EWMA
+  - time-series analysis
+---
+
+# Motivation
+
+In preparation for a recent meeting with one of the managers, we took their portfolio through different stresses. When the team and I construct the narrative to take to the meeting, we're always conscious of where we might be challenged on some of the numbers and how we can translate them for those less risk-inclined.
+One thing that caught my eye was a stark difference between the event-weighted shock and the time-weighted shock for certain scenarios. If correlations break down/larger idio risk than normal, which do we use to inform decisions?
+Part of my job is providing this comfort for our managers. This is an interesting rabbit hole with a lot of moving parts and a lot of maths behind it. So this note is a memo to self to make an informative tool on stress testing.
+
+## Scope
+The things I'm going to look at in particular are:
+- EW: EVT, copulas, tail-dependence
+- TW: EWMA, Kalman filters
+- VaR
+
+The end result being an interactive tool/calculator and accompanying notebooks for managers and other practitioners to play around with and get a better sense of what a commercial risk model is doing when you conduct a stress test.
+
+H.
