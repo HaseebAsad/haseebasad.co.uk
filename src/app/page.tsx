@@ -62,11 +62,11 @@ export default function HomePage() {
           <h2 className="text-3xl font-semibold">Blog</h2>
           <div className="space-y-4">
             <article className="p-6 border border-gray-200 dark:border-gray-700 rounded-lg hover:shadow-lg transition-shadow">
-              <h3 className="text-xl font-semibold mb-2">Generating Alpha</h3>
+              <h3 className="text-xl font-semibold mb-2">Memorandum: On Stress Testing</h3>
               <p className="text-gray-600 dark:text-gray-300 mb-4">
-                Preview of your latest blog post...
+                In preparation for an interactive tool
               </p>
-              <span className="text-sm text-gray-500">January 24, 2025</span>
+              <span className="text-sm text-gray-500">July 17, 2025</span>
             </article>
           </div>
           <Link 
