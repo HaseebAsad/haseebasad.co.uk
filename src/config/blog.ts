@@ -1,6 +1,7 @@
 // src/config/blog.ts
 import { z } from 'zod';
 import { SITE } from './site';
+import { Analytics } from "@vercel/analytics/next";
 
 // Schema for blog post frontmatter
 export const blogSchema = z.object({
