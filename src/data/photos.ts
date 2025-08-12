@@ -10,6 +10,17 @@ export interface Photo {
   }
   
   export const photos: Photo[] = [
+
+    {
+      id: '43',
+      src: '/images/gallery/brasenose.jpeg',
+      alt: 'Brasenose College, Oxford',
+      width: 4000,
+      height: 6000,
+      category: 'FujiFilm XF10',
+      date: '2025-08-09'
+    },
+
     {
       id: '42',
       src: '/images/gallery/bruce-lee-sf.jpeg',
