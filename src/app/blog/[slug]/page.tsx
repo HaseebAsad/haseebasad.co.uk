@@ -20,9 +20,9 @@ interface Props {
 export default async function BlogPost({ params }: Props) {
   const resolvedParams = await params
   const post = await getPostBySlug(resolvedParams.slug)
-  
   if (!post) {
-    notFound()
+    notFound();
+    // return a friendly fallback rendering
   }
 
   return (

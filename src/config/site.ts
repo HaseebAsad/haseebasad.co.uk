@@ -7,7 +7,7 @@ export const SITE = {
     ogImage: "astropaper-og.jpg",
     lightAndDarkMode: true,
     postPerPage: 3,
-    scheduledPostMargin: 15 * 60 * 1000, // 15 minutes
+    scheduledPostMargin: 24 * 60 * 60 * 1000, // 24 hours, allows for testing
     showArchives: true,
     editPost: {
       url: "https://github.com/haseebasad",
