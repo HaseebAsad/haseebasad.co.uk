@@ -4,10 +4,10 @@ import Link from 'next/link';
 // Preview blog posts
 const posts = [
   {
-    title: "Memorandum: On Stress Testing",
-    description: "In preparation for an interactive tool",
-    date: "2025-07-17",
-    slug: "stress-test-prep"
+    title: "Setting goals for 2026",
+    description: "Discussing my goals and intentions for the new year to keep myself accountable",
+    date: "2025-12-31",
+    slug: "resolutions-2026"
   }
 ];
 

@@ -2,7 +2,7 @@
 export const SITE = {
     website: "https://haseebbasad.co.uk/",
     author: "Haseeb Asad",
-    desc: "Photography & Quantitative Trading",
+    desc: "Photography & Quant",
     title: "Haseeb Asad",
     ogImage: "astropaper-og.jpg",
     lightAndDarkMode: true,
@@ -10,7 +10,7 @@ export const SITE = {
     scheduledPostMargin: 15 * 60 * 1000, // 15 minutes
     showArchives: true,
     editPost: {
-      url: "https://github.com/yourusername/blog/edit/main/content/blog",
+      url: "https://github.com/haseebasad",
       text: "Suggest Changes",
       appendFilePath: true,
     },
@@ -38,26 +38,14 @@ export const SITE = {
   export const SOCIALS: SocialObjects = [
     {
       name: "Github",
-      href: "https://github.com/yourusername",
+      href: "https://github.com/haseebasad",
       linkTitle: `${SITE.title} on Github`,
       active: true,
     },
     {
       name: "LinkedIn",
-      href: "https://linkedin.com/in/yourusername",
+      href: "https://www.linkedin.com/in/haseeb-asad-535862177/",
       linkTitle: `${SITE.title} on LinkedIn`,
-      active: true,
-    },
-    {
-      name: "Twitter",
-      href: "https://twitter.com/yourusername",
-      linkTitle: `${SITE.title} on Twitter`,
-      active: true,
-    },
-    {
-      name: "Instagram",
-      href: "https://instagram.com/yourusername",
-      linkTitle: `${SITE.title} on Instagram`,
       active: true,
     },
   ] as const;
